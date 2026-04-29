@@ -66,3 +66,28 @@ body {
     font-weight: 900;
   }
 }
+
+
+@theme {
+  /* 로딩바가 0에서 100까지 차오르는 애니메이션 */
+  @keyframes loading-fill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+  --animate-loading-fill: loading-fill 3s forwards cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* 로고가 둥둥 떠있는 효과 (Bounce보다 부드러움) */
+  @keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  --animate-floating: floating 2s infinite ease-in-out;
+}
+
+@theme {
+  @keyframes splash-out {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.05); } /* 살짝 커지며 사라짐 */
+  }
+  --animate-splash-out: splash-out 0.5s forwards ease-in-out;
+}

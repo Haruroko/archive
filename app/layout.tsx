@@ -59,7 +59,9 @@ export default function RootLayout({
       lang="ko"
       className={`${archiveSans.variable} ${archiveSerif.variable} ${archiveTitleLight.variable} ${archiveTitleMedium.variable} ${archiveTextSemibold.variable} ${archiveTitleBold.variable} ${archiveTitleBlack.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
